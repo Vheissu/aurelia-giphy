@@ -1,0 +1,13 @@
+<template>
+    <h1>Aurelia Giphy</h1>
+    <p>Search for some gifs over at Giphy.</p>
+    <input type="text" class="search-input" placeholder="Search for a gif" value.bind="searchTerm" input.delegate="search(searchTerm) & debounce: 250">
+
+    <h2 show.bind="gifs.length">Showing search results for ${searchTerm}</h2>
+
+    <div if.bind="gifs.length" class="gifs" layout="rows top-justify">
+        <div repeat.for="gif of gifs" class="gifs__gif">
+            <img src.bind="gif.previewUrl" click.delegate="viewGif(gif)" class="gifs__gif__image">
+        </div>
+    </div>
+</template>

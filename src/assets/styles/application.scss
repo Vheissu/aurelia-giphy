@@ -1,0 +1,41 @@
+@import "~flex-layout-attribute/sass/flex-layout-attribute";
+
+.search-input {
+    background: #EAEAEA;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+    outline: none;
+    padding: 8px 15px;
+}
+
+.gifs {
+
+}
+
+.gifs__gif {
+    overflow: hidden;
+    width: 100%;
+
+    @media all and (min-width: 480px) {
+        width: 50%;
+    }
+
+    @media all and (min-width: 680px) {
+        width: 33%;
+    }
+
+    @media all and (min-width: 992px) {
+        width: 25%;
+    }
+}
+
+.gifs__gif__image {
+    cursor: pointer;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    padding: 10px;
+    width: 100%;
+}
